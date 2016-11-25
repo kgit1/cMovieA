@@ -16,26 +16,52 @@ href="${pageContext.request.contextPath}/resources/css/main.css">
 <p style="text-align:right;color:red;font-size:0.8em">ver20Nov2016</p>
 New Content here
 
-<p><a href="showFormMovies" class="button">Add Movie</a></p>
+<p><a href="showFormMovies" class="button">Add Movie</a>
+<a href="showMovie" class="button">Show Movie</a></p>
+<form action="showMovieByYear">
+<input type="text" name="year"/>
+<input type="submit" value="Show" class="save"/>
+</form>
+
 
 <table class="del">
-<tr><td>by Id</td><td><form action="deleteMovie1">
+<tr><td>by Id</td><td><form action="showMovieById">
+<input type="text" name="id"/>
+<input type="submit" value="Show" class="save"/>
+</form></td>
+<td>by Title</td><td><form action="showMovieByTitle">
+<input type="text" name="title"/>
+<input type="submit" value="Show" class="save"/>
+</form></td></tr>
+<tr><td>by Director</td><td><form action="showMovieByDirector">
+<input type="text" name="director"/>
+<input type="submit" value="Show" class="save"/>
+</form></td>
+<td>by Year</td><td><form action="showMovieByYear">
+<input type="text" name="year"/>
+<input type="submit" value="Show" class="save"/>
+</form></td></tr>
+</table>
+<p></p>
+<table class="del">
+<tr><td>by Id</td><td><form action="deleteMovieById">
 <input type="text" name="id"/>
 <input type="submit" value="Delete" class="save"/>
 </form></td>
-<td>by Title</td><td><form action="deleteMovie2">
+<td>by Title</td><td><form action="deleteMovieByTitle">
 <input type="text" name="title"/>
 <input type="submit" value="Delete" class="save"/>
 </form></td></tr>
-<tr><td>by Director</td><td><form action="deleteMovie3">
+<tr><td>by Director</td><td><form action="deleteMovieByDirector">
 <input type="text" name="director"/>
 <input type="submit" value="Delete" class="save"/>
 </form></td>
-<td>by Year</td><td><form action="deleteMovie4">
+<td>by Year</td><td><form action="deleteMovieByYear">
 <input type="text" name="year"/>
 <input type="submit" value="Delete" class="save"/>
 </form></td></tr>
 </table>
+<p></p>
 <table>
 <tr><th colspan="4">TOP MOVIES</th></tr>
 <tr>
